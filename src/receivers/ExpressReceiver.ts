@@ -285,6 +285,7 @@ export default class ExpressReceiver implements Receiver {
         if (this.processBeforeResponse) {
           if (!response) {
             storedResponse = '';
+            res.status(200).send();
           } else {
             storedResponse = response;
           }
